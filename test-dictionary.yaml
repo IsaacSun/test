@@ -1,0 +1,834 @@
+openapi: 3.0.1
+info:
+  title: VAS API definitions
+  description: VAS API definitions (ASP.NET Core 3.1)
+  contact:
+    name: OpenAPI-Generator Contributors
+  version: v2.0.3
+paths:
+  /vas/api/PcPromotion:
+    post:
+      tags:
+        - ConvertApi
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/VoucherConvertArgs'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VoucherConvertArgs'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/VoucherConvertArgs'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/VoucherConvertArgs'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/VoucherConvertMessage'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoucherConvertMessage'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/VoucherConvertMessage'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '500':
+          description: Server Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+  /vas/api/Issue:
+    post:
+      tags:
+        - IssueApi
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/PcIssueArgs'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PcIssueArgs'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PcIssueArgs'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/PcIssueArgs'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcIssueMessage'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcIssueMessage'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcIssueMessage'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '403':
+          description: Forbidden
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '500':
+          description: Server Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+  /vas/api/PermissionEnquiry:
+    post:
+      tags:
+        - PermissionEnquiryApi
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/PermissionEnquiryRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PermissionEnquiryRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PermissionEnquiryRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/PermissionEnquiryRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PermissionEnquiryResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PermissionEnquiryResponse'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PermissionEnquiryResponse'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '500':
+          description: Server Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+  '/vas/api/PcPromotion/{id}':
+    get:
+      tags:
+        - QueryApi
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcPromotionItemDto'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcPromotionItemDto'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcPromotionItemDto'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '500':
+          description: Server Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+  '/vas/api/{wynnId}/PcPromotions':
+    get:
+      tags:
+        - QueryApi
+      parameters:
+        - name: wynnId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: employeeId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/VoucherTrackingRecordDto'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoucherTrackingRecordDto'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/VoucherTrackingRecordDto'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '500':
+          description: Server Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+  /vas/api/PromotionChangeReason:
+    get:
+      tags:
+        - QueryApi
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/RatingStatisticItem'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RatingStatisticItem'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/RatingStatisticItem'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '500':
+          description: Server Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+  /vas/api/Void:
+    post:
+      tags:
+        - VoidApi
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/PcVoidArgs'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PcVoidArgs'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PcVoidArgs'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/PcVoidArgs'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcVoidMessage'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcVoidMessage'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcVoidMessage'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '403':
+          description: Forbidden
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+        '500':
+          description: Server Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PcLocalizableException'
+components:
+  schemas:
+    VoucherConvertArgs:
+      type: object
+      properties:
+        promotionId:
+          type: integer
+          format: int64
+          nullable: true
+        promotionType:
+          type: string
+          nullable: true
+        status:
+          type: string
+          nullable: true
+        createdBy:
+          type: string
+          nullable: true
+        propertyCode:
+          type: integer
+          format: int32
+          nullable: true
+        reason:
+          type: string
+          nullable: true
+      additionalProperties: false
+    VoucherConvertMessage:
+      type: object
+      properties:
+        statusCode:
+          type: string
+          nullable: true
+        message:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PcLocalizableException:
+      type: object
+      properties:
+        message:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PcIssueArgs:
+      type: object
+      properties:
+        availableDate:
+          type: string
+          format: date-time
+          nullable: true
+        propertyCode:
+          type: integer
+          format: int32
+          nullable: true
+        playerID:
+          type: string
+          nullable: true
+        lastName:
+          type: string
+          nullable: true
+        firstName:
+          type: string
+          nullable: true
+        expireDate:
+          type: string
+          format: date-time
+          nullable: true
+        offerAmount:
+          type: number
+          format: double
+          nullable: true
+        promotionName:
+          type: string
+          nullable: true
+        workstation:
+          type: string
+          nullable: true
+        compType:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PcIssueMessage:
+      type: object
+      properties:
+        statusCode:
+          type: string
+          nullable: true
+        message:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PermissionEnquiryRequest:
+      type: object
+      properties:
+        loginName:
+          type: string
+          nullable: true
+        loginProperty:
+          type: string
+          nullable: true
+        employeeId:
+          type: string
+          nullable: true
+        domainShortName:
+          type: string
+          nullable: true
+        domain:
+          type: string
+          nullable: true
+        adGroups:
+          type: array
+          items:
+            type: string
+          nullable: true
+      additionalProperties: false
+    PropertyNameEnum:
+      enum:
+        - WM
+        - WP
+        - GLOBAL
+      type: string
+    Permission:
+      type: object
+      properties:
+        permissionId:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        displayName:
+          type: string
+          nullable: true
+        isPage:
+          type: boolean
+          nullable: true
+        propertyName:
+          $ref: '#/components/schemas/PropertyNameEnum'
+      additionalProperties: false
+    PermissionEnquiryResponse:
+      type: object
+      properties:
+        accountId:
+          type: integer
+          format: int32
+          nullable: true
+        employeeId:
+          type: string
+          nullable: true
+        accountName:
+          type: string
+          nullable: true
+        role:
+          type: string
+          nullable: true
+        displayName:
+          type: string
+          nullable: true
+        accountStatus:
+          type: string
+          nullable: true
+        permissions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Permission'
+          nullable: true
+      additionalProperties: false
+    PcPromotionItemDto:
+      type: object
+      properties:
+        itemId:
+          type: integer
+          format: int64
+        referenceId:
+          type: integer
+          format: int64
+        pointIssueRedeemId:
+          type: integer
+          format: int64
+        availableDate:
+          type: string
+          format: date-time
+        propertyCode:
+          type: integer
+          format: int32
+        playerId:
+          type: number
+          format: double
+        lastName:
+          type: string
+          nullable: true
+        firstName:
+          type: string
+          nullable: true
+        expireDate:
+          type: string
+          format: date-time
+        offerAmount:
+          type: number
+          format: double
+        status:
+          type: string
+          nullable: true
+        compItemName:
+          type: string
+          nullable: true
+        unit:
+          type: integer
+          format: int32
+          nullable: true
+        promotionCode:
+          type: integer
+          format: int32
+        importId:
+          type: integer
+          format: int64
+          nullable: true
+        promotionName:
+          type: string
+          nullable: true
+        origin:
+          type: string
+          nullable: true
+      additionalProperties: false
+    VoucherTrackingRecord:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          nullable: true
+        referenceID:
+          type: integer
+          format: int64
+          nullable: true
+        pointIssueRedeemID:
+          type: integer
+          format: int64
+          nullable: true
+        availableDate:
+          type: string
+          format: date-time
+          nullable: true
+        propertyCode:
+          type: integer
+          format: int32
+          nullable: true
+        playerID:
+          type: number
+          format: double
+        lastName:
+          type: string
+          nullable: true
+        firstName:
+          type: string
+          nullable: true
+        expireDate:
+          type: string
+          format: date-time
+          nullable: true
+        offerAmount:
+          type: number
+          format: double
+          nullable: true
+        status:
+          type: string
+          nullable: true
+        compItemName:
+          type: string
+          nullable: true
+        unit:
+          type: integer
+          format: int32
+          nullable: true
+        promotionCode:
+          type: integer
+          format: int32
+          nullable: true
+        importID:
+          type: integer
+          format: int64
+          nullable: true
+        origin:
+          type: string
+          nullable: true
+        promotionName:
+          type: string
+          nullable: true
+        promotionType:
+          type: string
+          nullable: true
+        redemptionType:
+          type: string
+          nullable: true
+        giftPromotionType:
+          type: string
+          nullable: true
+        batchID:
+          type: integer
+          format: int64
+          nullable: true
+      additionalProperties: false
+    VoucherTrackingRecordDto:
+      type: object
+      properties:
+        vouchers:
+          type: array
+          items:
+            $ref: '#/components/schemas/VoucherTrackingRecord'
+          nullable: true
+      additionalProperties: false
+    RatingStatisticItem:
+      type: object
+      properties:
+        summary:
+          type: object
+          additionalProperties:
+            type: object
+            additionalProperties: false
+          nullable: true
+        details:
+          type: array
+          items:
+            type: object
+            additionalProperties:
+              type: object
+              additionalProperties: false
+          nullable: true
+      additionalProperties: false
+    PcVoidArgs:
+      type: object
+      properties:
+        promotionId:
+          type: integer
+          format: int64
+          nullable: true
+        propertyCode:
+          type: integer
+          format: int32
+          nullable: true
+        reason:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PcVoidMessage:
+      type: object
+      properties:
+        statusCode:
+          type: string
+          nullable: true
+        message:
+          type: string
+          nullable: true
+      additionalProperties: false
